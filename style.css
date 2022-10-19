@@ -13,13 +13,13 @@ h1 {
 
 /* ----main part----- */
 main {
-    width: 80%;
+    width: 90%;
     margin: 10px auto;
     border: 3px solid #eee;
     color: #fff;
     font-weight: 700;
     display: grid;
-    grid-template-rows: 100px 200px 400px 100px;
+    grid-template-rows: 60px 200px 400px 100px;
     grid-template-columns: repeat(3, 1fr) 150px;
     grid-gap: 20px;
 }
@@ -27,17 +27,66 @@ main {
 main > div{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+}
+/* ------Header Part---------- */
+.Header {
+    background-color: #eb3b5a;
+    grid-column: 1/-1;
+    display: flex;
+    padding: 0;
+}
+/* header navbar */
+.Header .navbar{
+    display: flex;
+}
+.Header .navbar ul{
+    list-style: none;
 }
 
-.Header {background-color: #fc5c65;
-       grid-column: 1/-1; 
+/* navbar list */
+.Header .navbar ul li{
+    background-color: #111;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border-collapse: collapse;
+    float: left;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 50px;
 }
+/* list items link */
+.Header .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.Header .navbar ul li:hover{
+    background-color: #eb3b5a;
+}
+.Header .navbar ul ul{
+    display: none;
+    z-index: 1;
+}
+.Header .navbar li:hover > ul{
+    display: block;
+}
+/* =====End Heading part ======== */
 
-
-.Box1 {background-color: #009432;}
-.Box2 {background-color: #3867d6;}
-.Box3 {background-color: #182C61;}
+.Box1 {
+    background-color: #009432;
+    z-index: -1;
+}
+.Box2 {
+    background-color: #3867d6;
+    z-index: -1;
+}
+.Box3 {
+    background-color: #182C61;
+    z-index: -1;
+}
 .Side-Bar {background-color: #2C3A47;
        grid-row: 2/4; 
        grid-column: 4/5;
@@ -48,7 +97,7 @@ main > div{
 .Footer {background-color: #25CCF7;
        grid-column: 1/-1; 
 }
-
+/* =========Section Part 02========= */
 #section2{
     margin: 0;
     padding: 0;
