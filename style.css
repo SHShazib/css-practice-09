@@ -1,10 +1,17 @@
-/* *{
+/* -------whole page------- */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+}
+/* heding tag */
+h1 {
     text-align: center;
 }
+
+
+/* ----main part----- */
 main {
     width: 80%;
     margin: 10px auto;
@@ -16,29 +23,33 @@ main {
     grid-template-columns: repeat(3, 1fr) 150px;
     grid-gap: 20px;
 }
+/* --------all child of main part------ */
 main > div{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.div1 {background-color: #fc5c65;
+
+.Header {background-color: #fc5c65;
        grid-column: 1/-1; 
 }
-.div2 {background-color: #009432;}
-.div3 {background-color: #3867d6;}
-.div4 {background-color: #182C61;}
-.div5 {background-color: #2C3A47;
+
+
+.Box1 {background-color: #009432;}
+.Box2 {background-color: #3867d6;}
+.Box3 {background-color: #182C61;}
+.Side-Bar {background-color: #2C3A47;
        grid-row: 2/4; 
        grid-column: 4/5;
 }
-.div6 {background-color: #F97F51;
+.Main-Menu {background-color: #F97F51;
        grid-column: 1/4; 
 }
-.div7 {background-color: #25CCF7;
+.Footer {background-color: #25CCF7;
        grid-column: 1/-1; 
-} */
+}
 
-body{
+#section2{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -53,23 +64,36 @@ body{
 .calender {
     width: 400px;
     height: auto;
-    border: 5px solid red;
+    margin-top: 20px;
+    border: 5px solid #eee;
     background: #fff;
     box-sizing: border-box;
-    box-shadow: 0 10px 10px 0 gray;
+    box-shadow: 0 5px 50px rgba(0
+, 0, 0,0.5);
 }
 .calender .image 
 {
     width: 100%;
     height: 200px;
-    background: black;
+    background: url(pic1.jpg);
+    background-size: cover;
     color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.calender .image  > h2,h3 {
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.calender .image  > h3{
+    font-weight: 500;
 }
 .calender .date{
     padding: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
-    grid-gap: 30px;
+    grid-gap: 25px;
     box-sizing: border-box;
 }
 .calender .date div {
@@ -80,12 +104,17 @@ body{
     color: #262626;
     padding: 5px 20px;
 }
-.calender .date div.day:nth-child(6), 
-.calender .date div.number:nth-child(7n + 6) {
+
+.calender .date div.day:nth-child(6),
+.calender .date div.day:nth-child(7), 
+.calender .date div.number:nth-child(7n + 6),
+.calender .date div.number:nth-child(7n + 7) {
     color: #eb3b5a;
 }
-.calender .date div.number.active {
+.calender .date div.number.active,
+.calender .date .number:hover {
     background-color: #20bf6b;
     color: #fff;
     cursor: pointer;
 } 
+
